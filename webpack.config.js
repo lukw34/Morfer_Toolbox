@@ -11,7 +11,7 @@ const webpack = require('webpack'),
         new ExtractTextPlugin({filename: '[name].css', allChunks: true}),
         new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.js', minChunks: Infinity}),
         new HtmlWebpackPlugin({
-            title: 'react-webpack-template',
+            title: 'Morfer Toolbox',
             template: 'app/client/index.ejs',
             filename: 'index.html',
             inject: 'body',
