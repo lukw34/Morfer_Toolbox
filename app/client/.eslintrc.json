@@ -9,6 +9,7 @@
     "import"
   ],
   "rules": {
+    "react/require-default-props": [0],
     "max-len": [0],
     "eol-last": [0],
     "import/no-extraneous-dependencies": ["warn", {"devDependencies": true}],
