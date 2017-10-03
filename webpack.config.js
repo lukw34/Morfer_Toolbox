@@ -87,7 +87,7 @@ const webpack = require('webpack'),
         {
             loader: 'sass-loader',
             options: {
-                data: '@import "shared/assets/variables.scss";',
+                data: '@import "shared/assets/variables.scss"; @import "shared/assets/animation.scss";',
                 includePaths: [path.resolve(__dirname, './app/client')]
             }
         }
@@ -101,7 +101,7 @@ module.exports = {
     context: __dirname,
     output: {
         path: path.join(__dirname, 'public'),
-        filename: '[name]' + (ENV === 'prod' ? '.min' : '') + '.js'
+        filename: `[name]${ENV === 'prod' ? '.min' : ''}.js`
     },
     resolve: {
         extensions: ['.scss', '.css', '.js', '.jsx', '.json'],
@@ -138,6 +138,20 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: 'shared/img/[name].[ext]'
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.svg$/,
+                use: [
+                    {
+                        loader: 'babel-loader'
+                    },
+                    {
+                        loader: 'react-svg-loader',
+                        options: {
+                            jsx: true
                         }
                     }
                 ]

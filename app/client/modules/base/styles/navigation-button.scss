@@ -1,7 +1,8 @@
+
 .navigationButton {
   min-width: 130px;
   text-align: center;
-  transition: all .5s ease-out;
+  transition: all .2s ease-out;
   background-color: $body-color;
   border: solid 3px $second-color;
   color: $second-color;
@@ -9,8 +10,47 @@
   padding: 10px 15px;
   margin: 15px 5px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  .arrow {
+    transform: rotate(-45deg);
+    border-bottom: $second-color solid 2px;
+    border-right: $second-color solid 2px;
+    height: 12px;
+    width: 12px;
+    margin: -2px 7px 0 -10px;
+    &::before {
+      opacity: 0;
+      position: absolute;
+      margin: 2px 0 0 -4px;
+      border-bottom: $second-color solid 1.3px;
+      border-right: $second-color solid 1.3px;
+      height: 7px;
+      width: 7px;
+      content: "";
+    }
+  }
+
   &:hover {
     background-color: $main-color;
-
+    .arrow {
+      &::before {
+        animation-duration:0.7s;
+        animation-iteration-count: infinite;
+        animation-name: arrow-leave-out;
+      }
+    }
   }
 }
+
+@keyframes arrow-leave-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-5px, -5px);
+  }
+}
+
