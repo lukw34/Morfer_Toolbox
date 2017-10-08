@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import NavigationButton from './NavigationButton';
 
 import styles from '../styles/main-view.scss';
@@ -18,7 +20,7 @@ const MainView = ({buttons = []}) => (
 );
 
 MainView.propTypes = {
-    buttons: React.PropTypes.arrayOf(React.PropTypes.shape({}))
+    buttons: PropTypes.arrayOf(PropTypes.shape({}))
 };
 
 export default MainView;

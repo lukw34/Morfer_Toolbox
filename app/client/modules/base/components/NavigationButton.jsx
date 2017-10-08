@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from '../styles/navigation-button.scss';
 
@@ -10,7 +11,7 @@ const NavigationButton = ({name}) => (
 );
 
 NavigationButton.propTypes = {
-    name: React.PropTypes.string
+    name: PropTypes.string
 };
 
 export default NavigationButton;
