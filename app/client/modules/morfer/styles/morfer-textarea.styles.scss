@@ -1,3 +1,12 @@
-.textAreaContainer {
-  background-color: rgba($main-color, 0.4);
+.morferTextAreaContainer {
+  .textAreaContainer {
+    border: solid rgba($main-color, 0.4) 30px;
+    .textArea {
+      width: 65vw;
+      height: 30vh;
+      padding: 6px;
+      border-width: 0;
+      margin-bottom: -3px;
+    }
+  }
 }
