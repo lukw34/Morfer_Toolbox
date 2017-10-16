@@ -7,11 +7,8 @@ class Mongo {
         return new Promise((resolve, reject) => {
             global.logger.log('Connecting to MongoDB...');
 
-            this.mongoose.connect(url, error => {
-                error ? reject(error) : resolve();
-            });
-        })
-
+            this.mongoose.connect(url, error => (error ? reject(error) : resolve()));
+        });
     }
 
     getList(Instance) {

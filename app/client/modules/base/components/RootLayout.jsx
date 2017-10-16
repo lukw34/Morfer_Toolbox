@@ -3,13 +3,10 @@ import PropTypes from 'prop-types';
 
 import NavigationButton from './NavigationButton';
 
-import styles from '../styles/main-view.scss';
+import styles from '../styles/root-layout.styles.scss';
 
-const MainView = ({buttons = []}) => (
-    <div className={styles.mainView}>
-        <div className={styles.title}>
-            Morfer Toolbox
-        </div>
+const RootLayout = ({buttons = []}) => (
+    <div className={styles.container}>
         <div className={styles.buttonContainer}>
             {buttons.map(button => (<NavigationButton
                 key={button.name}
@@ -19,8 +16,8 @@ const MainView = ({buttons = []}) => (
     </div>
 );
 
-MainView.propTypes = {
+RootLayout.propTypes = {
     buttons: PropTypes.arrayOf(PropTypes.shape({}))
 };
 
-export default MainView;
+export default RootLayout;

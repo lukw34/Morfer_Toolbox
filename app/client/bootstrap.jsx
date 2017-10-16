@@ -1,7 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 
-import MainView from './modules/base/containers/MainView';
+import BaseLayout from './modules/base/components/BaseLayout';
 import './shared/assets/main.scss';
 
-ReactDOM.render(<MainView />, document.getElementById('app'));
+ReactDOM.render(
+    <BrowserRouter>
+        <Route
+            to="/"
+            component={BaseLayout}
+        />
+    </BrowserRouter>, document.getElementById('app'));

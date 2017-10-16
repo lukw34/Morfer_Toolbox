@@ -1,6 +1,6 @@
 
 .navigationButton {
-  min-width: 130px;
+  min-width: 150px;
   text-align: center;
   transition: all .2s ease-out;
   background-color: $body-color;
@@ -8,10 +8,11 @@
   color: $second-color;
   font-size: 1.2rem;
   padding: 10px 15px;
-  margin: 15px 5px;
+  margin: 50px 15px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  text-decoration: none;
 
   .arrow {
     transform: rotate(-45deg);
