@@ -2,11 +2,18 @@
   .textAreaContainer {
     border: solid rgba($main-color, 0.4) 30px;
     .textArea {
-      width: 65vw;
-      height: 30vh;
+      transition: background-color 0.5s ease-out;
+      color: white;
+      background-color: rgba($second-color, 0.1);
+      width: 75vw;
+      height: 55vh;
       padding: 6px;
       border-width: 0;
       margin-bottom: -3px;
+      &:focus {
+        background-color: rgba($second-color, 0.5);
+        color: black;
+      }
     }
   }
 }
