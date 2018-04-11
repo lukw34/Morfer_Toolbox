@@ -32,6 +32,7 @@ class Bootstrap {
         global.Mongo.connect(this.mongo).then(() => {
             this._startExpress(routes);
         }).catch(({message}) => {
+            this._startExpress(routes);
             global.logger.error(message);
         });
     }

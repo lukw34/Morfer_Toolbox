@@ -1,17 +1,16 @@
 .morferTextAreaContainer {
   .textAreaContainer {
-    border: solid rgba($main-color, 0.4) 30px;
     .textArea {
+      box-shadow:4px 8px 22px 3px rgba(0,0,0, 0.2);
       transition: background-color 0.5s ease-out;
-      color: white;
-      background-color: rgba($second-color, 0.1);
+      //background-color: rgba($second-color, 0.1);
       width: 75vw;
       height: 55vh;
       padding: 6px;
       border-width: 0;
       margin-bottom: -3px;
       &:focus {
-        background-color: rgba($second-color, 0.5);
+        outline: none;
         color: black;
       }
     }
